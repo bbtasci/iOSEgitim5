@@ -179,6 +179,12 @@
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="name"/>
                             </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fireworks" translatesAutoresizingMaskIntoConstraints="NO" id="0cG-oX-MDr">
+                                <rect key="frame" x="15" y="731" width="384" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="SMg-j2-cWA"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="AKH-03-In1"/>
                         <color key="backgroundColor" red="0.0" green="1" blue="0.91567468640000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -186,13 +192,16 @@
                             <constraint firstItem="AKH-03-In1" firstAttribute="bottom" secondItem="pND-vV-VHs" secondAttribute="bottom" constant="175" id="0HF-Ox-vLa"/>
                             <constraint firstItem="tmM-jF-AnO" firstAttribute="leading" secondItem="AKH-03-In1" secondAttribute="leading" constant="15" id="0wS-5I-HpX"/>
                             <constraint firstItem="pND-vV-VHs" firstAttribute="top" secondItem="tmM-jF-AnO" secondAttribute="bottom" id="66a-gH-sD4"/>
+                            <constraint firstItem="0cG-oX-MDr" firstAttribute="leading" secondItem="AKH-03-In1" secondAttribute="leading" constant="15" id="Fiy-uM-M1f"/>
                             <constraint firstItem="AKH-03-In1" firstAttribute="trailing" secondItem="MEO-Fd-xk0" secondAttribute="trailing" constant="15" id="HRg-Yh-f1h"/>
                             <constraint firstItem="MEO-Fd-xk0" firstAttribute="leading" secondItem="AKH-03-In1" secondAttribute="leading" constant="15" id="RiV-01-f6g"/>
                             <constraint firstItem="4a8-s8-B8D" firstAttribute="leading" secondItem="AKH-03-In1" secondAttribute="leading" constant="15" id="UhY-nT-eq9"/>
                             <constraint firstItem="AKH-03-In1" firstAttribute="trailing" secondItem="pND-vV-VHs" secondAttribute="trailing" constant="15" id="Umh-kV-7Eq"/>
+                            <constraint firstItem="AKH-03-In1" firstAttribute="trailing" secondItem="0cG-oX-MDr" secondAttribute="trailing" constant="15" id="VVe-ES-87N"/>
                             <constraint firstItem="tmM-jF-AnO" firstAttribute="top" secondItem="HQ2-i3-uz0" secondAttribute="bottom" constant="15" id="WCR-2m-26x"/>
                             <constraint firstItem="AKH-03-In1" firstAttribute="trailing" secondItem="tmM-jF-AnO" secondAttribute="trailing" constant="15" id="YUG-Xm-Q5Y"/>
                             <constraint firstItem="4a8-s8-B8D" firstAttribute="top" secondItem="MEO-Fd-xk0" secondAttribute="bottom" constant="15" id="Znd-B1-aoy"/>
+                            <constraint firstAttribute="bottom" secondItem="0cG-oX-MDr" secondAttribute="bottom" constant="15" id="a4C-Tf-iSM"/>
                             <constraint firstItem="HQ2-i3-uz0" firstAttribute="top" secondItem="4a8-s8-B8D" secondAttribute="bottom" constant="15" id="e2O-2y-FBe"/>
                             <constraint firstItem="MEO-Fd-xk0" firstAttribute="top" secondItem="AKH-03-In1" secondAttribute="top" constant="5" id="eXd-4a-IM5"/>
                             <constraint firstItem="HQ2-i3-uz0" firstAttribute="leading" secondItem="AKH-03-In1" secondAttribute="leading" constant="15" id="kJO-pq-kde"/>
@@ -205,6 +214,7 @@
                     <navigationItem key="navigationItem" id="c17-32-sY5"/>
                     <connections>
                         <outlet property="clickMeButton" destination="unu-S9-u6f" id="KHf-8e-MRq"/>
+                        <outlet property="congratsImageArea" destination="0cG-oX-MDr" id="3P8-t6-94X"/>
                         <outlet property="counterLabel" destination="pND-vV-VHs" id="epB-vC-9ap"/>
                         <outlet property="iconSecondArea" destination="MEO-Fd-xk0" id="5wu-uL-4bp"/>
                         <outlet property="nameField" destination="tmM-jF-AnO" id="Tl3-p4-hyE"/>
@@ -238,5 +248,6 @@
     <resources>
         <image name="cursorNavyBlue" width="4167" height="4167"/>
         <image name="cursorTurqoise" width="4167" height="4167"/>
+        <image name="fireworks" width="512" height="309"/>
     </resources>
 </document>

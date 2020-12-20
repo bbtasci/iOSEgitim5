@@ -21,6 +21,7 @@ class SecondViewController: UIViewController {
     var newPlayer = Player()
     
     var delegate: SecondViewControllerDelegate?
+    
 
     // MARK: - OUTLETS
     @IBOutlet weak var iconSecondArea: UIImageView!
@@ -29,11 +30,14 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var startGameButton: UIButton!
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var counterLabel: UILabel!
+    @IBOutlet weak var congratsImageArea: UIImageView!
     
     // MARK: - LIFECYCLE METHODS
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareUI()
+        congratsImageArea.isHidden = true
+        clickMeButton.isHidden = true
     }
     
     fileprivate func prepareUI() {
@@ -77,7 +81,9 @@ class SecondViewController: UIViewController {
         if nameField.text == "" {
             let alertEnterName = UIAlertController(title: "Warning!", message: "Please enter name before starting.", preferredStyle: .alert)
             alertEnterName.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            self.present(alertEnterName, animated: true)}
+            self.present(alertEnterName, animated: true)} else {
+                clickMeButton.isHidden = false
+            }
     }
     
     func startTimer() {
@@ -100,6 +106,7 @@ class SecondViewController: UIViewController {
     func showHighscoreAlert() {
         if score > highscore{
             highscore = score
+            congratsImageArea.isHidden = false
             let alertNewHighscore = UIAlertController(title: "Congratulations!", message: "You scored the highest!", preferredStyle: .alert)
             alertNewHighscore.addAction(UIAlertAction(title: "OK", style: .default, handler: {_ in self.sendNewScore(newPlayer: self.newPlayer)
             }))
@@ -123,7 +130,7 @@ class SecondViewController: UIViewController {
         }
     }
     
-    // MARK: SEND NEW SCORE
+    // MARK: - SEND NEW SCORE
     func sendNewScore(newPlayer: Player) {
         newPlayer.setScore(newScore: score)
         newPlayer.setName(newName: nameField.text ?? "")
