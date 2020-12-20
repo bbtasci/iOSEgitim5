@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9rL-rt-V2G">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ClickCountGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ee7-sc-Ls6">
+                                <rect key="frame" x="15" y="432" width="384" height="120"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.91453014929999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="8BI-Ey-KIb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="30"/>
+                                <state key="normal" title="Go to Game Page!">
+                                    <color key="titleColor" red="0.0" green="0.0050341852539999999" blue="0.2062988281" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q6F-aU-EoE"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="nT1-Se-SsU" userLabel="ScoresStackView">
+                                <rect key="frame" x="15" y="567" width="384" height="120"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No highscore has been saved yet!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nzv-6D-XuG">
+                                        <rect key="frame" x="0.0" y="0.0" width="384" height="60"/>
+                                        <color key="backgroundColor" red="0.0" green="1" blue="0.91567468640000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="I5p-Rw-4ED"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.21224331860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jYv-b2-z8x">
+                                        <rect key="frame" x="0.0" y="60" width="384" height="60"/>
+                                        <color key="backgroundColor" red="0.0" green="1" blue="0.91567468640000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="9TW-qH-nqY"/>
+                                        </constraints>
+                                        <state key="normal" title="Reset Highscore!">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.21224331860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="resetButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fQ2-OV-5hh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="cursorTurqoise" translatesAutoresizingMaskIntoConstraints="NO" id="Wye-MQ-i5Y">
+                                <rect key="frame" x="0.0" y="93" width="414" height="189"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="189" id="hv3-8q-Mly"/>
+                                    <constraint firstAttribute="width" constant="414" id="nv5-4r-Cim"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dq6-ob-E9P">
+                                <rect key="frame" x="15" y="297" width="384" height="120"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.91567468640000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="4gp-9W-kYW"/>
+                                </constraints>
+                                <string key="text">Welcome to Click Counter.                                             In this game, we will see how many times                               you can click the button in 60 seconds.                            Game starts with first click.</string>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0050341852539999999" blue="0.2062988281" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.21224331860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dq6-ob-E9P" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="3ZR-6U-8FD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dq6-ob-E9P" secondAttribute="trailing" constant="15" id="6ex-Ad-TWF"/>
+                            <constraint firstItem="nT1-Se-SsU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="AvR-Lf-Ubp"/>
+                            <constraint firstItem="dq6-ob-E9P" firstAttribute="top" secondItem="Wye-MQ-i5Y" secondAttribute="bottom" constant="15" id="aAl-Pl-m7C"/>
+                            <constraint firstItem="ee7-sc-Ls6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="aY8-Dl-qbR"/>
+                            <constraint firstItem="ee7-sc-Ls6" firstAttribute="top" secondItem="dq6-ob-E9P" secondAttribute="bottom" constant="15" id="aib-iN-tGz"/>
+                            <constraint firstItem="nT1-Se-SsU" firstAttribute="top" secondItem="ee7-sc-Ls6" secondAttribute="bottom" constant="15" id="qKM-X0-qdE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nT1-Se-SsU" secondAttribute="trailing" constant="15" id="su9-uY-uPr"/>
+                            <constraint firstItem="Wye-MQ-i5Y" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="uCr-zY-Izn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ee7-sc-Ls6" secondAttribute="trailing" constant="15" id="uOL-V6-tdU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="0w7-7b-Vcy"/>
+                    <connections>
+                        <outlet property="highscoreLabel" destination="nzv-6D-XuG" id="eNh-I1-tdx"/>
+                        <outlet property="iconArea" destination="Wye-MQ-i5Y" id="ah0-ZR-Oqw"/>
+                        <outlet property="infoLabel" destination="dq6-ob-E9P" id="M3c-5l-R7x"/>
+                        <outlet property="resetButton" destination="jYv-b2-z8x" id="vLZ-cy-aoz"/>
+                        <outlet property="startButton" destination="ee7-sc-Ls6" id="cJT-Fh-fcd"/>
+                        <segue destination="Dta-j9-nsV" kind="show" identifier="startButton" id="ykj-v8-FzP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928.98550724637687" y="75.669642857142847"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="CQz-rZ-JW7">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" id="Dta-j9-nsV" customClass="SecondViewController" customModule="ClickCountGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sS5-fh-kCE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="HQ2-i3-uz0">
+                                <rect key="frame" x="15" y="432" width="384" height="120"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vCD-sn-dN8">
+                                        <rect key="frame" x="0.0" y="0.0" width="185.5" height="120"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.21224331860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="25"/>
+                                        <state key="normal" title="Start!">
+                                            <color key="titleColor" red="0.0" green="1" blue="0.91567468640000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="startGameButtonTouched:" destination="Dta-j9-nsV" eventType="touchUpInside" id="auN-GY-KKb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="unu-S9-u6f">
+                                        <rect key="frame" x="198.5" y="0.0" width="185.5" height="120"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0050341852539999999" blue="0.2062988281" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="23"/>
+                                        <state key="normal" title="Click Me!">
+                                            <color key="titleColor" red="0.0" green="1" blue="0.91567468640000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="clickMeButtonTouched:" destination="Dta-j9-nsV" eventType="touchUpInside" id="lP6-Sj-KiB"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="unu-S9-u6f" firstAttribute="height" secondItem="vCD-sn-dN8" secondAttribute="height" id="iRp-80-fBh"/>
+                                    <constraint firstItem="unu-S9-u6f" firstAttribute="width" secondItem="vCD-sn-dN8" secondAttribute="width" id="tmE-xf-OuS"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60 seconds left!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4a8-s8-B8D">
+                                <rect key="frame" x="15" y="297" width="384" height="120"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.21224331860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="Y43-Ma-aTp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="35"/>
+                                <color key="textColor" red="0.0" green="1" blue="0.91567468640000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cursorNavyBlue" translatesAutoresizingMaskIntoConstraints="NO" id="MEO-Fd-xk0">
+                                <rect key="frame" x="15" y="93" width="384" height="189"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="189" id="zRd-Ct-acP"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="clicked 0 times!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pND-vV-VHs">
+                                <rect key="frame" x="15" y="627" width="384" height="60"/>
+                                <color key="backgroundColor" red="0.0" green="0.0050341852539999999" blue="0.2062988281" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="jcq-rf-Yvg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="25"/>
+                                <color key="textColor" red="0.0" green="1" blue="0.91567468640000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Name" textAlignment="center" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="tmM-jF-AnO">
+                                <rect key="frame" x="15" y="567" width="384" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="28u-e8-aTG"/>
+                                </constraints>
+                                <color key="textColor" red="0.0" green="0.0050341852539999999" blue="0.2062988281" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="name"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="AKH-03-In1"/>
+                        <color key="backgroundColor" red="0.0" green="1" blue="0.91567468640000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="AKH-03-In1" firstAttribute="bottom" secondItem="pND-vV-VHs" secondAttribute="bottom" constant="175" id="0HF-Ox-vLa"/>
+                            <constraint firstItem="tmM-jF-AnO" firstAttribute="leading" secondItem="AKH-03-In1" secondAttribute="leading" constant="15" id="0wS-5I-HpX"/>
+                            <constraint firstItem="pND-vV-VHs" firstAttribute="top" secondItem="tmM-jF-AnO" secondAttribute="bottom" id="66a-gH-sD4"/>
+                            <constraint firstItem="AKH-03-In1" firstAttribute="trailing" secondItem="MEO-Fd-xk0" secondAttribute="trailing" constant="15" id="HRg-Yh-f1h"/>
+                            <constraint firstItem="MEO-Fd-xk0" firstAttribute="leading" secondItem="AKH-03-In1" secondAttribute="leading" constant="15" id="RiV-01-f6g"/>
+                            <constraint firstItem="4a8-s8-B8D" firstAttribute="leading" secondItem="AKH-03-In1" secondAttribute="leading" constant="15" id="UhY-nT-eq9"/>
+                            <constraint firstItem="AKH-03-In1" firstAttribute="trailing" secondItem="pND-vV-VHs" secondAttribute="trailing" constant="15" id="Umh-kV-7Eq"/>
+                            <constraint firstItem="tmM-jF-AnO" firstAttribute="top" secondItem="HQ2-i3-uz0" secondAttribute="bottom" constant="15" id="WCR-2m-26x"/>
+                            <constraint firstItem="AKH-03-In1" firstAttribute="trailing" secondItem="tmM-jF-AnO" secondAttribute="trailing" constant="15" id="YUG-Xm-Q5Y"/>
+                            <constraint firstItem="4a8-s8-B8D" firstAttribute="top" secondItem="MEO-Fd-xk0" secondAttribute="bottom" constant="15" id="Znd-B1-aoy"/>
+                            <constraint firstItem="HQ2-i3-uz0" firstAttribute="top" secondItem="4a8-s8-B8D" secondAttribute="bottom" constant="15" id="e2O-2y-FBe"/>
+                            <constraint firstItem="MEO-Fd-xk0" firstAttribute="top" secondItem="AKH-03-In1" secondAttribute="top" constant="5" id="eXd-4a-IM5"/>
+                            <constraint firstItem="HQ2-i3-uz0" firstAttribute="leading" secondItem="AKH-03-In1" secondAttribute="leading" constant="15" id="kJO-pq-kde"/>
+                            <constraint firstItem="pND-vV-VHs" firstAttribute="top" secondItem="tmM-jF-AnO" secondAttribute="bottom" id="qIL-Bb-BXq"/>
+                            <constraint firstItem="AKH-03-In1" firstAttribute="trailing" secondItem="4a8-s8-B8D" secondAttribute="trailing" constant="15" id="r3A-UC-oYo"/>
+                            <constraint firstItem="pND-vV-VHs" firstAttribute="leading" secondItem="AKH-03-In1" secondAttribute="leading" constant="15" id="x29-l9-7vJ"/>
+                            <constraint firstItem="AKH-03-In1" firstAttribute="trailing" secondItem="HQ2-i3-uz0" secondAttribute="trailing" constant="15" id="xr0-eW-X9C"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="c17-32-sY5"/>
+                    <connections>
+                        <outlet property="clickMeButton" destination="unu-S9-u6f" id="KHf-8e-MRq"/>
+                        <outlet property="counterLabel" destination="pND-vV-VHs" id="epB-vC-9ap"/>
+                        <outlet property="iconSecondArea" destination="MEO-Fd-xk0" id="5wu-uL-4bp"/>
+                        <outlet property="nameField" destination="tmM-jF-AnO" id="Tl3-p4-hyE"/>
+                        <outlet property="startGameButton" destination="vCD-sn-dN8" id="V6L-7h-Lxg"/>
+                        <outlet property="timerLabel" destination="4a8-s8-B8D" id="cKb-G2-LuT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O2w-4w-ZFh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1631.8840579710147" y="75.669642857142847"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7kj-vS-MKV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9rL-rt-V2G" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sVy-nJ-OTy">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="OeQ-Rp-PvG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nWs-uc-aQA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="75.669642857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cursorNavyBlue" width="4167" height="4167"/>
+        <image name="cursorTurqoise" width="4167" height="4167"/>
+    </resources>
+</document>
